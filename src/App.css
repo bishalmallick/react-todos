@@ -1,38 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.5em;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-top: auto;
+}
+/* #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90% */
+.input-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 30px 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(5, 5, 5);
+  margin-right: 5px;
+  border: none;
+  border-bottom: 1px solid rgb(5, 5, 5);
+  outline: none;
+  background: transparent;
+}
+
+input::placeholder {
+  padding-left: 10px;
+  color: #707070;
+}
+
+input + i {
+  margin: 7px 0 5px 0;
+}
+
+li {
+  list-style: none;
+  padding-top: 5px;
+}
+
+.check {
+  text-decoration: line-through;
+}
+
+.list-section {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 15px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.list-section .fa-check-circle {
+  margin-left: auto;
+  padding-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.list-section .fa-trash-alt {
+  margin: 0 10px;
+}
+
+.todos-section {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  padding: 20px;
+  min-height: 200px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    min-width: 80vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer__text a {
+  text-decoration: none;
+  overflow: hidden;
+  transition: .5s;
+  padding-left: 5px;
+}
+
+.footer__text a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
 }
